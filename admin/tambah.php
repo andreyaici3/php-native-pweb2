@@ -64,7 +64,7 @@
     <?php
         $id = $_GET['id'];
         delete('postingan', ['id_postingan' => $id]);
-        redirect('admin/');
+        redirect('');
     ?>
 <?php endif; ?>
 

@@ -66,7 +66,7 @@
 <?php if (@$_GET['aksi'] == 'hapus') : ?>
     <?php
         delete('kategori', ['id_kategori' => $_GET['id']]);
-        redirect('admin/index.php?page=kategori');
+        redirect('index.php?page=kategori');
     ?>
 <?php endif; ?>
 
