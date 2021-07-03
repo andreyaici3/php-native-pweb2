@@ -2,7 +2,7 @@
 session_start();
 include 'database.php';
 
-define('url', 'http://localhost/blog/');
+define('url', 'https://andrey-native.daarulquran.sch.id/');
 
 
 function prosesLogin(){
