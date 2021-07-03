@@ -1,8 +1,8 @@
 <?php 
     $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "db_blog";
+    $user = "daaw4477_dq";
+    $pass = "joya_123";
+    $db = "daaw4477_phpnative";
 
 
     $koneksi = mysqli_connect($host,$user,$pass,$db);
