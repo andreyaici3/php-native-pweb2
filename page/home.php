@@ -46,23 +46,23 @@
             <!-- Featured blog post-->
             <?php if (!isset($_GET['label'])){ ?>
             <div class="card mb-4">
-                <a href="<?= base_url('index.php?page=post&&slug=') . $hasil[0]->slug ?>">
+                <a href="<?= base_url('index.php?page=post&&slug=') . end($hasil)->slug ?>">
                 
-                <?php if (file_exists('assets/images/' . $hasil[0]->thumbnail)) { ?>
-                    <img src="<?= base_url('assets/images/') . $hasil[0]->thumbnail ?>" class="card-img-top1" >
+                <?php if (file_exists('assets/images/' . end($hasil)->thumbnail)) { ?>
+                    <img src="<?= base_url('assets/images/') . end($hasil)->thumbnail ?>" class="card-img-top1" >
                 <?php } else { ?>
                     <img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." />
                 <?php } ?>
                 </a>
                 <div class="card-body">
-                    <div class="small text-muted"><?= convertTanggal($hasil[0]->date_post); ?></div>
-                    <?php $kategori = select('post_kat_detail', ['id_postingan' => $hasil[0]->id_postingan]); ?>
+                    <div class="small text-muted"><?= convertTanggal(end($hasil)->date_post); ?></div>
+                    <?php $kategori = select('post_kat_detail', ['id_postingan' => end($hasil)->id_postingan]); ?>
                     <?php foreach($kategori as $k) :?>
                         <a class="badge bg-secondary mt-2 text-decoration-none link-light" href="#!"><?= select('kategori', ['id_kategori' => $k->id_kategori])[0]->kategori ?></a>
                     <?php endforeach; ?>
-                    <h2 class="card-title h4 mt-2"><?= (strlen($hasil[0]->judul) < 100 ) ? $hasil[0]->judul : substr($hasil[0]->judul, 0, 50) . "...." ?></h2>
-                    <p class="card-text"><?= substr($hasil[0]->isi, 0, 180) . "....." ?></p>
-                    <a class="btn btn-primary" href="<?= base_url('index.php?page=post&&slug=') . $hasil[0]->slug ?>">Read more →</a>
+                    <h2 class="card-title h4 mt-2"><?= (strlen(end($hasil)->judul) < 100 ) ? end($hasil)->judul : substr(end($hasil)->judul, 0, 50) . "...." ?></h2>
+                    <p class="card-text"><?= substr(end($hasil)->isi, 0, 180) . "....." ?></p>
+                    <a class="btn btn-primary" href="<?= base_url('index.php?page=post&&slug=') . end($hasil)->slug ?>">Read more →</a>
                 </div>
             </div>
             <?php } else { ?>
@@ -75,7 +75,7 @@
                 <div class="col-lg-6">
                     <!-- Blog post-->
                     <div class="card mb-4">
-                        <a href="<?= base_url('index.php?page=post&&slug=') . $hasil[0]->slug ?>">
+                        <a href="<?= base_url('index.php?page=post&&slug=') . $key->slug ?>">
                         <?php if (file_exists('assets/images/' . $key->thumbnail)) { ?>
                             <img src="<?= base_url('assets/images/') . $key->thumbnail ?>" class="card-img-top" >
                         <?php } else { ?>
