@@ -2,6 +2,10 @@
 
 <?php 
 
+    if (isset($_SESSION['login']['status']) == true){
+        redirect('admin/index.php');
+    }
+
     if (isset($_POST['login'])){
         prosesLogin();
     }

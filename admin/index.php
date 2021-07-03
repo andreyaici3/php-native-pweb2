@@ -13,7 +13,6 @@ if (!isset($_GET['page'])){
     }  else {
         include 'kat.php';
     }
-    
 }
 
 

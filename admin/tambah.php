@@ -143,3 +143,10 @@
 <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 
 <?php endif; ?>
+
+
+<?php if (@$_GET['aksi'] == 'logout') : ?>
+    <?php
+        logout();
+    ?>
+<?php endif; ?>
