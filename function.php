@@ -12,6 +12,7 @@ function prosesLogin(){
 
     if (@$email && @$pass){
         $data = [
+            'id'    => $email[0]->id_user,
             'status' => true,
             'nama'  => $email[0]->name,
             'email' => $email[0]->email
@@ -56,7 +57,7 @@ function tambah(){
         'isi'       => $_POST['isi'],
         'slug'      => strtolower(str_replace(" ", "-", $_POST['judul'])),
         'date_post' => date('Y-m-d h:i:s', time()),
-        'id_user'   => 1
+        'id_user'   => $_SESSION['login']['id']
     ];
     insert('postingan', $data);
     $last = last_id();
