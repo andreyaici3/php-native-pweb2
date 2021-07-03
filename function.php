@@ -135,8 +135,7 @@ function upload(){
 }
 
 function redirect($url){
-    header("Location: ". base_url() . $url);
-    exit();
+    echo "<meta http-equiv='refresh' content='0; url=$url'>";
 }
 
 
