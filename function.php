@@ -18,7 +18,7 @@ function prosesLogin(){
             'email' => $email[0]->email
         ];
         $_SESSION['login'] = $data;
-        redirect('admin/index.php');
+        redirect('index.php');
     } else {
         $pesan = "Maaf Login Gagal, Silahkan Cek Username / Password Terlebih Dahulu";
         echo "<script>alert('$pesan');</script>";
