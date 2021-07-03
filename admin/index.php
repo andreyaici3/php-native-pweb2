@@ -10,9 +10,7 @@ if (!isset($_GET['page'])){
 } else {
     if (@$_GET['aksi'] == ''){
         include 'daftarkategori.php';
-    } else if ($_GET['aksi'] == 'logout') {
-        logout();
-    } else {
+    }  else {
         include 'kat.php';
     }
     

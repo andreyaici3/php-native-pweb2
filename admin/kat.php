@@ -69,3 +69,9 @@
         redirect('admin/index.php?page=kategori');
     ?>
 <?php endif; ?>
+
+<?php if (@$_GET['aksi'] == 'hapus') : ?>
+    <?php
+        logout();
+    ?>
+<?php endif; ?>
