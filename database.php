@@ -1,6 +1,6 @@
 <?php 
     $host = "localhost";
-    $user = "daaw4477_dq";
+    $user = "daaw4477_andrey";
     $pass = "joya_123";
     $db = "daaw4477_phpnative";
 
