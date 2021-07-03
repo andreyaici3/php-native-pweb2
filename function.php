@@ -29,7 +29,7 @@ function prosesLogin(){
 
 function logout(){
     session_destroy();
-    redirect('admin/login.php');
+    redirect('login.php');
 }
 
 function tambahKategori(){
@@ -37,7 +37,7 @@ function tambahKategori(){
         'kategori'  => $_POST['kategori']
     ];
     insert('kategori', $data);
-    redirect('admin/index.php?page=kategori');
+    redirect('index.php?page=kategori');
 }
 
 function updateKategori(){
@@ -45,7 +45,7 @@ function updateKategori(){
         'kategori'  => $_POST['kategori']
     ];
     update('kategori', $data, ['id_kategori' => $_GET['id']]);
-    redirect('admin/index.php?page=kategori');
+    redirect('index.php?page=kategori');
 }
 
 
@@ -70,7 +70,7 @@ function tambah(){
         insert('post_kat_detail', $data);   
     }
 
-    redirect('admin/index.php');
+    redirect('index.php');
 }
 
 function edit(){
@@ -96,7 +96,7 @@ function edit(){
         ];
         insert('post_kat_detail', $data);   
     }
-    redirect('admin/index.php');
+    redirect('index.php');
 }
 
 function upload(){
