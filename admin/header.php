@@ -2,7 +2,7 @@
 <?php 
     require '../function.php'; 
     if (!isset($_SESSION['login']['status']) == true){
-        redirect('admin/login.php');
+        redirect('login.php');
     }
 
     if (isset($_GET['logout'])){
