@@ -32,7 +32,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="<?= base_url() ?>">Home</a></li>
                     <?php if (isset($_SESSION['login']['status']) == true){ ?>
-                        <li class="nav-item"><a class="nav-link" href="<?= base_url('admin/index.php?logout') ?>" >Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('admin/index.php?aksi=logout') ?>" >Logout</a></li>
                     <?php } else { ?>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url('admin/login.php') ?>">Login</a></li>
                     <?php } ?>
